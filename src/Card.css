@@ -1,0 +1,12 @@
+.card{
+    border-style: dotted;
+    flex: 1;
+    padding:  20px;
+}
+
+.view{
+    display:flex;
+   border-style:dotted;
+   justify-content: center;
+   height: 80vh;
+}
