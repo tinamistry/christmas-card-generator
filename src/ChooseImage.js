@@ -10,7 +10,7 @@ import Option4 from './templates/Option4.jpg';
 
 
 
-function ChooseImage(){
+function ChooseImage({onSelectedImage}){
 
 
  
@@ -18,17 +18,18 @@ function ChooseImage(){
         <div className = "stepone">
             <div className = "templateOptions">
     
-            <Card className = "option" >
+            <Card className = "option" onClick={() => onSelectedImage(Option1)}>
                 <CardMedia
                     sx={{ height: 370 }}
                     image={Option1}
                     title="Option 1"
+                  
                 
                 />
             
              </Card>
 
-             <Card className = "option" >
+             <Card className = "option" onClick={() => onSelectedImage(Option2)}>
                 <CardMedia
                     sx={{ height: 370 }}
                     image={Option2}
@@ -37,7 +38,7 @@ function ChooseImage(){
             
              </Card>
 
-             <Card className = "option" >
+             <Card className = "option" onClick={() => onSelectedImage(Option3) }>
                 <CardMedia
                     sx={{ height: 370 }}
                     image={Option3}
@@ -46,7 +47,7 @@ function ChooseImage(){
             
              </Card>
 
-             <Card className = "option">
+             <Card className = "option" onClick={() => onSelectedImage(Option4)}>
                 <CardMedia
                     sx={{ height: 370 }}
                     image={Option4}

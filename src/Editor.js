@@ -6,7 +6,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useState } from "react";
 
 
-function Editor(){
+function Editor({onSelectedImage}){
 
     const [currentStep, setCurrentStep] = useState(1)
     const [step1, setStep1] = useState(true)
@@ -46,7 +46,7 @@ function Editor(){
             <div className = "options">
               
                 <div>
-                   {step1 && <ChooseImage/>}
+                   {step1 && <ChooseImage onSelectedImage = {onSelectedImage} />}
         
                 </div>
                

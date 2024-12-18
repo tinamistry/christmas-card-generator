@@ -1,11 +1,15 @@
 
 
-function Card(){
+function Card({image}){
 
     return(
         <div className = "card">
             <div className = "view">
-                hello
+            {image ? (
+                <img src={image} alt="Selected Template" className="card-image" />
+                ) : (
+                <p>Please select a template</p>
+                )}
             </div>
         </div>
     )
