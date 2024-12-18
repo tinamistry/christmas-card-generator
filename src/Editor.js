@@ -34,9 +34,7 @@ function Editor(){
 
     return (
         <div className = "editor"> 
-           
-            <div className = "options">
-                <div className="navigation">
+             <div className="navigation">
                         <IconButton onClick = {previousStep}>
                             <ArrowBackIosIcon/>
                         </IconButton>
@@ -45,6 +43,8 @@ function Editor(){
                         </IconButton>
                 </div>
         
+            <div className = "options">
+              
                 <div>
                    {step1 && <ChooseImage/>}
         
