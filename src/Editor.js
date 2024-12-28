@@ -7,6 +7,7 @@ import { useState } from "react";
 import AddText from "./AddText";
 
 
+
 function Editor({onSelectedImage, onUploadedImage}){
 
     const [currentStep, setCurrentStep] = useState(1)

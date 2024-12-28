@@ -1,12 +1,12 @@
 import './Editor.css'
 
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Option1 from './templates/Option1.jpg';
 import Option2 from './templates/Option2.jpg';
 import Option3 from './templates/Option3.jpg';
 import Option4 from './templates/Option4.jpg';
+import chooseTemplate from './templates/chooseTemplate.png'
 
 
 
@@ -16,6 +16,7 @@ function ChooseImage({onSelectedImage}){
  
     return(
         <div className = "stepone">
+             <img src={chooseTemplate} alt="Choose a Template" className="title-image" />
             <div className = "templateOptions">
     
             <Card className = "option" onClick={() => onSelectedImage(Option1)}>
