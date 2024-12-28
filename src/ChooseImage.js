@@ -53,13 +53,7 @@ function ChooseImage({onSelectedImage}){
                     image={Option4}
                     title="Option 4"
                 />
-            
              </Card>
-
-            
-
-
-                
            </div>
         </div>
     )

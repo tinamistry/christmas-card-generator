@@ -6,7 +6,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useState } from "react";
 
 
-function Editor({onSelectedImage}){
+function Editor({onSelectedImage, onUploadedImage}){
 
     const [currentStep, setCurrentStep] = useState(1)
     const [step1, setStep1] = useState(true)
@@ -51,7 +51,7 @@ function Editor({onSelectedImage}){
                 </div>
                
                 <div>
-                    {step2 && <UploadPicture/>}
+                    {step2 && <UploadPicture onUploadedImage = {onUploadedImage}/>}
                 </div>
                
      

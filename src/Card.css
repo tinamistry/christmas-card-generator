@@ -1,12 +1,37 @@
-.card{
+.card {
     border-style: dotted;
     flex: 1;
-    padding:  20px;
+    padding: 20px;
 }
 
-.view{
-    display:flex;
-   border-style:dotted;
-   justify-content: center;
-   height: 80vh;
+.view {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-style: dotted;
+    border-color:aqua;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 85%;
+    height: 100%; /* Fill the container */
+   
+    position: absolute; /* Allow for layering */
+    z-index: 1; /* Layer this below the uploaded image */
+    pointer-events: none; /* Prevent interaction with the uploaded image */
+  
+}
+
+.uploaded-image {
+    border-style: solid;
+    position: absolute; 
+    top: 65px;
+    width: 30%; 
+    height: 30%; 
+    object-fit: contain;
+    z-index: 2; /* Ensure this image is above the base image */
+    pointer-events: none; /* Prevent interaction with the uploaded image */
 }
