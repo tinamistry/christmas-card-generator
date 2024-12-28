@@ -4,6 +4,7 @@ import { Icon, IconButton } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useState } from "react";
+import AddText from "./AddText";
 
 
 function Editor({onSelectedImage, onUploadedImage}){
@@ -11,6 +12,7 @@ function Editor({onSelectedImage, onUploadedImage}){
     const [currentStep, setCurrentStep] = useState(1)
     const [step1, setStep1] = useState(true)
     const [step2, setStep2 ] = useState(false)
+    const[step3, setStep3] = useState(false);
 
 
     function previousStep(){
@@ -19,8 +21,13 @@ function Editor({onSelectedImage, onUploadedImage}){
             setStep1(true);
             setStep2(false);
        }
-        
+       if (currentStep == 3){
+          setCurrentStep(2)
+          setStep2(true)
+          setStep3(false)
 
+       }
+        
     }
 
     function nextStep(){
@@ -29,6 +36,12 @@ function Editor({onSelectedImage, onUploadedImage}){
             setStep1(false);
             setStep2(true);
        }
+       if (currentStep == 2){
+            setCurrentStep(3)
+            setStep2(false)
+            setStep3(true)
+       }
+
     }
 
 
@@ -53,10 +66,10 @@ function Editor({onSelectedImage, onUploadedImage}){
                 <div>
                     {step2 && <UploadPicture onUploadedImage = {onUploadedImage}/>}
                 </div>
-               
-     
-            
-            
+
+                <div>
+                    {step3 && <AddText/>}
+                </div>
             </div>
 
         
